@@ -1,0 +1,14 @@
+/***  formatação inicial  *****************************************************************/
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+.root{
+    background-image: url(/img/Logar-Circulo-Wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 100%;
+}
