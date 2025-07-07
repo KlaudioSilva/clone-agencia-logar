@@ -1,14 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /***  formatação inicial  *****************************************************************/
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     font-size: 16px;
+    text-decoration: none;
+    list-style: none;
 }
-.root{
-    background-image: url(/img/Logar-Circulo-Wallpaper.png);
+
+/***  pre-definindo cores   ********************************************************/
+:root{
+    --preto: #000000;
+    --branco: #ffffff;
+    --font-primary: #055a83;
+    --font-secondary: #33cc99;
+    --green-bg-global: #084766;
+    --gradient-start: #055a82;
+    --gradient-end: #000305;
+}
+
+.container{
+    padding-left: calc((100vw - (1264px - (2 * (1264px * 5 / 100)))) / 2);
+    padding-right: calc((100vw - (1264px - (2 * (1264px * 5 / 100)))) / 2);
+    border: 1px solid yellowgreen;
+}
+
+/***  menu de nav/idiomas   *********************************************************/
+
+#nav-hero{
+    height: 592px;
+    background-color: beige;
+    background-image: url(/img/Logar-Circulo-opaco.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 500px;
+    background-attachment: fixed;
+    
     width: 100%;
+}
+
+.logo{
+    width: 204px;
+    height: 105px;
+}
+
+.logo img{
+    width: 184px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover{
+    transform: scale(0.9);
+}
+
+header{
+    margin-top: 30px;
+}
+
+header nav{
+    display: flex;
+}
+
+.menu{
+    width: 90%;
+}
+
+.menu ul{
+    display: flex;
+    height: 105px;
+    justify-content: end;
+    align-items: center;
+    gap: 42px;
+    margin-right: 42px;
+}
+
+.menu ul li a{
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--font-primary);
+    display: inline-block;
+    padding: 15px 10px;
+    margin-right: -10px;
+}
+
+.menu ul li a:hover{
+    color: var(--font-secondary);
+}
+
+.menu ul li{
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.menu ul li:hover{
+    transform: translateY(-7px);
+}
+
+.language{
+    width: 102px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.language img{
+    transition: filter 0.3s ease;
+}
+
+.language img:hover{
+    filter: brightness(1.2);
+}
+
+
+/***  secao hero  *****************************************************************/
+.hero{
+    display: flex;
+}
+.hero-texts{
+    width: 68.900%;
+    align-content: center;
+    padding: 10px;
+}
+
+.hero-texts h1{
+    text-transform: uppercase;
+    font-size: 43px;
+    color: var(--font-secondary);
+    font-weight: 800;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+}
+
+.hero-texts p{
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--font-primary);
+    line-height: 1.5em;
+    letter-spacing: -0.4px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-texts strong{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--font-primary);
+}
+
+.hero-texts a{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    color: var(--branco);
+    background-color: var(--font-secondary);
+    padding: 10px 20px;
+    transition: transform 0.4s ease;
+}
+
+.hero-texts a:hover{
+    transform: scale(0.9);
+}
+
+.hero-image{
+    border: 1px solid red;
+    width: 328px;
+    margin: 0 0 -35px 0;
+}
+
+.hero-image img{
+    width: 327px;
 }
