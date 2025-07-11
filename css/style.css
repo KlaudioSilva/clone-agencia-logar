@@ -24,20 +24,18 @@
 .container{
     padding-left: calc((100vw - (1264px - (2 * (1264px * 5 / 100)))) / 2);
     padding-right: calc((100vw - (1264px - (2 * (1264px * 5 / 100)))) / 2);
-    border: 1px solid yellowgreen;
 }
 
 /***  menu de nav/idiomas   *********************************************************/
 
 #nav-hero{
-    height: 592px;
+    height: 532px;
     background-color: beige;
     background-image: url(/img/Logar-Circulo-opaco.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
     width: 100%;
 }
 
@@ -119,6 +117,7 @@ header nav{
 /***  secao hero  *****************************************************************/
 .hero{
     display: flex;
+    position: relative;
 }
 .hero-texts{
     width: 68.900%;
@@ -152,7 +151,7 @@ header nav{
 }
 
 .hero-texts a{
-    position: relative;
+    display: inline-block;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 800;
@@ -168,11 +167,180 @@ header nav{
 }
 
 .hero-image{
-    border: 1px solid red;
     width: 328px;
-    margin: 0 0 -35px 0;
+    position: relative;
 }
 
 .hero-image img{
     width: 327px;
+    position: relative;
+    top: 15px;
+}
+
+/***  secao o que fazemos  *****************************************************************/
+#what-we-do{
+    background: linear-gradient(140deg, #055982 0%, #0a374d 100%);
+    height: 845px;
+}
+
+.title{
+    width: 100%;
+    height: 53px;
+    align-content: center;
+    margin-top: 30px;
+    padding-top: 1px;
+    padding-bottom: 30px; /* só 1px já resolve! */
+}
+
+.title h2{
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1em;
+    letter-spacing: -1px;
+    color: var(--branco);
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.works{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.works .works-opt{
+    flex: 1;
+    max-width: 33.3%;
+    box-sizing: border-box;
+}
+
+.works-opt{
+    padding: 20px;
+}
+
+.works-opt a .wk-img{
+    width: 66px;
+    padding-bottom: 20px;
+}
+
+.works-opt h3{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: -0.4px;
+    color: var(--branco);
+    text-shadow: 0px 4px 0px rgba(0,0,0, 0.21);
+    padding-bottom: 20px;
+}
+
+.works-opt p{
+    text-align: left;
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5em;
+    letter-spacing: 0px;
+    padding-bottom: 20px;
+}
+
+/* RESPONSIVO   *************************************************************/
+@media (max-width: 768px) {
+    .works {
+        flex-direction: column;
+    }
+
+    .works .works-opt {
+        width: 100%;
+    }
+}
+
+.btn-for-more{
+    width: 100%;
+    height: 36px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-for-more a{
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    background-color: var(--font-primary);
+    text-transform: uppercase;
+    color: var(--branco);
+    display: inline-block;
+    transition: transform 0.4s ease;
+}
+
+.btn-for-more a:hover{
+    transform: scale(0.9);
+}
+
+/***   ***/
+#middle-content{
+    height: 1526px;
+    background-color: beige;
+    background-image: url(/img/Logar-Circulo-opaco.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.container .differences{
+    display: flex;
+}
+
+.differences .differences-img{
+    width: 50%;
+}
+
+.differences .differences-img img{
+    width: 540px;
+}
+
+.differences .differences-txt{
+    width: 50%;
+    margin-top: -35px;
+}
+
+.differences .differences-txt .title h2{
+    color: var(--font-secondary);
+    padding: 10px;
+}
+
+.differences .differences-txt{
+    text-align: right;
+    color: var(--font-primary);
+    font-weight: 500;
+    line-height: 1.5em;
+    letter-spacing: -0.4px;
+}
+
+.differences .differences-txt .texts{
+    margin-top: 10px;
+}
+
+.differences .differences-txt .texts p{
+    box-sizing: border-box;
+    padding-bottom: 1em;
+}
+
+.certificate{
+    height: 241px;
+    border: 1px solid orange;
+}
+
+.certificate .certificate-bg{
+    background: linear-gradient(140deg, #055982 0%, #0a374d 100%);
+    border: 1px solid green;
+    border-radius: 20px;
+    height: 100%;
+}
+
+.certificate-bg .certificate-google a img{
+    width: 171px;
 }
